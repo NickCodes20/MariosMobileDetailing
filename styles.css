@@ -1,0 +1,516 @@
+:root {
+  /* Font Sizes */
+  --biggest-fs: 6rem;
+  --big-fs: 4rem;
+  --med-fs: 3rem;
+  --small-fs: 2rem;
+  --xs-fs: 1.5rem;
+
+  /* Colors */
+  --gold: hsl(48, 90%, 45%);
+  --salmon: hsl(0, 79%, 62%);
+  --font-color: hsl(0, 0%, 89%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: var(--font-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bodoni Moda", serif;
+}
+
+p,
+li {
+  font-family: "Inconsolata", monospace;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.logo {
+  width: 64px;
+  position: fixed;
+  top: 1rem;
+  left: 1.5rem;
+  z-index: 1;
+}
+
+.hamburger {
+  padding: 12px 0 0 24px;
+  font-size: 40px;
+  line-height: 3.5rem;
+  display: none;
+  transition: all 0.125s ease-in-out;
+  position: fixed;
+}
+
+.hamburger:hover,
+.hamburger:focus {
+  color: var(--font-color);
+}
+
+#toggle {
+  display: none;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-item {
+  margin: 1.5rem 2rem;
+  cursor: pointer;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: var(--xs-fs);
+  letter-spacing: 0.1rem;
+}
+
+header {
+  height: 100vh;
+  background-image: url(img/steering\ wheel\ bw.jpg);
+  background-size: 100vh;
+  background-repeat: no-repeat;
+  background-position-y: 35%;
+  background-position-x: -15%;
+  box-shadow: inset 0 0 100px 100px hsla(0, 0%, 0%, 40%);
+  display: flex;
+  flex-direction: column;
+}
+
+.gradient-divider {
+  width: 100%;
+  height: 2px;
+  background: radial-gradient(var(--gold), var(--salmon) 25%);
+}
+
+.head-text {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  background: hsla(0, 0%, 0%, 40%);
+  box-shadow: 0 0 100px 100px hsla(0, 0%, 0%, 40%);
+  align-self: center;
+}
+
+header h1 {
+  text-align: center;
+  margin: 5rem 0;
+  font-size: var(--biggest-fs);
+}
+
+header p {
+  font-size: var(--xs-fs);
+  width: 40ch;
+  align-self: flex-end;
+}
+
+.icon {
+  fill: white;
+  width: 30px;
+  align-self: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+.packages {
+  background: hsl(0, 7%, 3%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+  margin: 0 10rem;
+}
+
+.CTA-container {
+  border: 2px solid var(--gold);
+  border-radius: 20px;
+  padding: 1.5rem 2.5rem;
+}
+
+.CTA-container a {
+  margin: 0 auto;
+}
+
+.CTA-img {
+  width: 50%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+h2 {
+  text-align: center;
+  font-size: var(--big-fs);
+  padding: 5rem 0;
+}
+
+h3 {
+  font-size: var(--med-fs);
+  text-align: center;
+}
+
+.package-container {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  padding: 3rem 0;
+}
+
+.container a {
+  margin: 0 auto;
+}
+
+.package-img {
+  width: 25%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+ol {
+  font-size: var(--xs-fs);
+  align-self: center;
+  line-height: 2rem;
+}
+
+.CTA-BTN {
+  align-self: center;
+  background: var(--salmon);
+  color: var(--font-color);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: var(--small-fs);
+  padding: 0.5em 2em;
+  border-radius: 20px;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 20px 0.5px var(--gold);
+  cursor: pointer;
+}
+
+.special-CTA-BTN {
+  align-self: center;
+  background: var(--gold);
+  color: hsl(0, 0%, 0%);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: var(--small-fs);
+  padding: 0.5em 2em;
+  border-radius: 20px;
+  border: 2px solid var(--salmon);
+  box-shadow: 0 0 20px 0.5px var(--gold);
+  cursor: pointer;
+}
+
+footer {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+footer a {
+  font-family: "Inconsolata", monospace;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 0;
+  margin: 0 10rem;
+}
+
+.footer-container a {
+  display: flex;
+}
+
+.footer-head {
+  font-size: var(--small-fs);
+  padding: 1rem 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info {
+  padding: 1rem 0;
+  font-size: var(--xs-fs);
+}
+
+.footer-icon {
+  fill: url(#gradient);
+
+  width: 30px;
+  margin-right: 2rem;
+}
+
+.icon-flex-container {
+  align-self: flex-end;
+}
+
+.icon-container {
+  display: flex;
+  padding-left: 0.5rem;
+}
+
+.nav-list.show {
+  display: block;
+  padding: 0;
+}
+
+.nav-bar-glass.show {
+  position: fixed;
+  width: 100%;
+  height: 375px;
+  background: hsla(0, 0, 0 / 80%);
+  border-radius: 0 0 20px 20px;
+  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
+  z-index: 1;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1466px) {
+  header h1 {
+    font-size: var(--big-fs);
+  }
+
+  h2 {
+    font-size: calc(var(--big-fs) - 0.5rem);
+  }
+
+  h3 {
+    font-size: calc(var(--med-fs) - 0.5rem);
+  }
+
+  .CTA-BTN {
+    font-size: calc(var(--small-fs) - 0.5rem);
+  }
+
+  .special-CTA-BTN {
+    font-size: calc(var(--small-fs) - 0.5rem);
+  }
+}
+
+@media screen and (max-width: 1225px) {
+  .nav-item {
+    font-size: calc(var(--xs-fs) - 0.25rem);
+  }
+
+  .footer-head {
+    font-size: calc(var(--xs-fs) - 0.25rem);
+  }
+
+  .contact-info {
+    font-size: calc(var(--xs-fs) - 0.25rem);
+  }
+
+  .package-img {
+    width: 250px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 1146px) {
+  header {
+    background-position-x: 0%;
+  }
+
+  ol {
+    font-size: calc(var(--xs-fs) - 0.25rem);
+  }
+
+  .package-container {
+    gap: 4rem;
+  }
+
+  .contact-info {
+    font-size: calc(var(--xs-fs) - 0.5rem);
+  }
+}
+
+@media screen and (max-width: 1054px) {
+  header h1 {
+    font-size: calc(var(--big-fs) - 0.5rem);
+  }
+
+  header p {
+    font-size: calc(var(--xs-fs) - 0.25rem);
+  }
+
+  h2 {
+    font-size: var(--med-fs);
+  }
+
+  h3 {
+    font-size: var(--small-fs);
+  }
+
+  ol {
+    font-size: calc(var(--xs-fs) - 0.25rem);
+  }
+
+  .container {
+    margin: 0 4rem;
+  }
+
+  .footer-container {
+    margin: 0 4rem;
+  }
+}
+@media screen and (max-width: 770px) {
+  /* Make ol's lay over top of images to save space transitioning to mobile */
+
+  .hamburger {
+    color: var(--font-color);
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    z-index: 2;
+  }
+
+  .nav-list {
+    text-align: center;
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 75px;
+  }
+
+  .nav-list a {
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
+
+  #toggle:checked + .nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-item {
+    padding: 0.75rem 0;
+  }
+
+  .logo {
+    left: initial;
+    right: 1.5rem;
+  }
+
+  header {
+    background-size: 100vw;
+  }
+
+  header h1 {
+    font-size: var(--med-fs);
+  }
+
+  header p {
+    /* margin: 0 auto; */
+    align-self: center;
+  }
+
+  .head-text {
+    margin: 4rem 0;
+  }
+
+  h2 {
+    font-size: calc(var(--med-fs) - 0.5rem);
+  }
+
+  h3 {
+    font-size: var(--small-fs);
+  }
+
+  .package-img {
+    display: none;
+  }
+
+  .CTA-img {
+    display: none;
+  }
+
+  .CTA-container {
+    background-image: url(img/person\ detailing.jpg);
+    background-size: 100vh;
+    background-position-y: 50%;
+    border-radius: 20px;
+    box-shadow: inset 0 0 200px 200px hsla(0, 0%, 0%, 50%);
+  }
+
+  .interior {
+    background-image: url(img/interior.jpg);
+    background-size: 100vh;
+    background-position: 75% 30%;
+    border-radius: 20px;
+    margin: 2rem 0;
+    box-shadow: inset 0 0 200px 200px hsla(0, 0%, 0%, 50%);
+  }
+
+  .exterior {
+    background-image: url(img/clean\ porche.jpg);
+    background-size: 100vh;
+    background-position: 10% 60%;
+    border-radius: 20px;
+    margin: 2rem 0;
+    box-shadow: inset 0 0 200px 200px hsla(0, 0%, 0%, 50%);
+  }
+
+  .package-container {
+    padding: 3em;
+  }
+
+  .icon-container .contact-info {
+    display: none;
+  }
+
+  .footer-icon {
+    padding: 0.5rem 0;
+  }
+
+  .footer-container {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 734px) {
+  header h1 {
+    font-size: calc(var(--med-fs) - 0.5rem);
+  }
+
+  header p {
+    width: 35ch;
+  }
+}
+
+@media screen and (max-width: 516px) {
+  .container {
+    padding: 2rem 0;
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    background-size: 150%;
+  }
+
+  header p {
+    width: 25ch;
+  }
+}
